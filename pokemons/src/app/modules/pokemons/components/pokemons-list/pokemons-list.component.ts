@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../../../../domain/pokemon';
+import { PokemonsService } from '../../../../services/pokemons.service';
 
 @Component({
   selector: 'app-pokemons-list',
@@ -8,57 +9,11 @@ import { Pokemon } from '../../../../domain/pokemon';
 })
 export class PokemonsListComponent implements OnInit{
   public pokemons: Pokemon[]=[]
+
+  constructor(private readonly pokemonsService: PokemonsService){}
   public ngOnInit(): void {
 
-    this.pokemons = [{
-      name: "bulbasaur",
-      id: 1,
-    },
-    {
-      name: "ivysaur",
-      id: 2
-    },
-    {
-      name: "venusaur",
-      id: 3
-    },
-    {
-      name: "charmander",
-      id: 4
-    },
-    {
-      name: "charmeleon",
-      id: 5
-    },
-    {
-      name: "charizard",
-      id: 6
-    },
-    {
-      name: "squirtle",
-      id: 7
-    },
-    {
-      name: "wartortle",
-      id: 8
-    },
-    {
-      name: "blastoise",
-      id: 9
-    },
-    {
-      name: "caterpie",
-      id: 10
-    },
-    {
-      name: "caterpie",
-      id: 11
-    },
-    {
-      name: "caterpie",
-      id: 12
-    }
-  ];
+    this.pokemons = this.pokemonsService.getPokemons();
   
   }
 public loadMore(): void{
@@ -67,7 +22,8 @@ public loadMore(): void{
 }
 
 public catchPokemon(pokemon: Pokemon): void {
-  console.log(pokemon);
+  this.pokemonsService.catchPokemon(pokemon)
+  console.log(this.pokemonsService.getMyPokemons());
   
 }
 }
