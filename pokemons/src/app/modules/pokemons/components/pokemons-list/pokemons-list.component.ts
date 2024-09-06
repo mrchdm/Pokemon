@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Pokemon } from '../../../../domain/pokemon';
 import { PokemonsService } from '../../../../services/pokemons.service';
 
 @Component({
   selector: 'app-pokemons-list',
   templateUrl: './pokemons-list.component.html',
-  styleUrl: './pokemons-list.component.scss'
+  styleUrl: './pokemons-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokemonsListComponent implements OnInit{
   public pokemons: Pokemon[]=[]

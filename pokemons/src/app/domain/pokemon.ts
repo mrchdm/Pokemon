@@ -6,3 +6,8 @@ export interface Pokemon {
 export interface MyPokemon extends Pokemon {
    date: Date;
 }
+
+
+export interface PokemonCard extends Pokemon {
+    date?: Date;
+ }

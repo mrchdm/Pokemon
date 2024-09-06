@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { PokemonsComponent } from './pokemons.component';
 import { PokemonImgPipe } from './pipes/pokemon-img.pipe';
 import { HighlightEvenDirective } from './directives/highlight-even.directive';
+import { MyPokemonListComponent } from './components/my-pokemon-list/my-pokemon-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HighlightEvenDirective } from './directives/highlight-even.directive';
     PokemonComponent,
     PokemonsComponent,
     PokemonImgPipe,
-    HighlightEvenDirective
+    HighlightEvenDirective,
+    MyPokemonListComponent
   ],
   imports: [
     CommonModule,
