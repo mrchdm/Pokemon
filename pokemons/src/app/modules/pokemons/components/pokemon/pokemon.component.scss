@@ -11,3 +11,10 @@ p-card {
         min-height: 40px;
     }
 }
+
+// ng-deep - переписываем правила, которые были созданы библиотекой
+::ng-deep .is-odd {
+    .p-card {
+        background-color: var(--blue-100);
+    }
+}

@@ -49,7 +49,16 @@ export class PokemonsListComponent implements OnInit{
     {
       name: "caterpie",
       id: 10
-    }];
+    },
+    {
+      name: "caterpie",
+      id: 11
+    },
+    {
+      name: "caterpie",
+      id: 12
+    }
+  ];
   
   }
 public loadMore(): void{
