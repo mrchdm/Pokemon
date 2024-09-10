@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './modules/core/core.module';
 import { PokemonsModule } from './modules/pokemons/pokemons.module';
+import { AppRoutinModule } from './app-routin.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PokemonsModule } from './modules/pokemons/pokemons.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    PokemonsModule
+    PokemonsModule,
+    AppRoutinModule
   ],
   providers: [
     provideClientHydration()

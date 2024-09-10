@@ -8,6 +8,7 @@ import { PokemonsComponent } from './pokemons.component';
 import { PokemonImgPipe } from './pipes/pokemon-img.pipe';
 import { HighlightEvenDirective } from './directives/highlight-even.directive';
 import { MyPokemonListComponent } from './components/my-pokemon-list/my-pokemon-list.component';
+import { PokemonsRoutingModule } from './pokemons-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MyPokemonListComponent } from './components/my-pokemon-list/my-pokemon-
   imports: [
     CommonModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    PokemonsRoutingModule
   ],
   exports: [PokemonsComponent]
 })
